@@ -179,7 +179,7 @@ ul {
 }
 
 section {
-  padding: 100px 0;
+  padding: 80px 0;
   position: relative;
   z-index: 1;
 }
@@ -609,7 +609,7 @@ section {
   background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 #about::before {
@@ -819,7 +819,7 @@ section {
    ============================================= */
 #courses {
   background: var(--bg-primary);
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .courses-grid {
@@ -1599,14 +1599,14 @@ section {
 }
 
 .form-container {
-  max-width: 860px;
+  max-width: 900px; /* Standardize width for better alignment */
   margin: 0 auto;
   background: var(--bg-secondary);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
-  padding: 80px;
+  padding: 60px; /* Reduced from 80px for tighter feel */
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -1624,15 +1624,27 @@ section {
 
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .form-group label {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .form-group input,
@@ -1657,23 +1669,33 @@ section {
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
+.form-submit-wrap {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
 .btn-submit {
   width: 100%;
+  max-width: 320px; /* Constrain width for a more premium centered look */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   background: var(--gradient-blue);
   color: white;
-  padding: 20px;
-  border-radius: var(--radius-sm);
+  padding: 18px 40px;
+  border-radius: var(--radius-md);
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
   font-size: 1.15rem;
   border: none;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
 }
 
 .btn-submit:hover {
