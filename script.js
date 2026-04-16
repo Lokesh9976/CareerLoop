@@ -301,6 +301,7 @@ function submitForm(event) {
         .then(result => {
             form.style.display = 'none';
             formSuccess.style.display = 'block';
+            formSuccess.classList.add('show');
             showToast("Form details captured successfully.");
 
             submitBtn.disabled = false;
